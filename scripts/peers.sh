@@ -1,11 +1,7 @@
 #!/bin/sh
-#
 # Check number of peers.
-#
 
-#
 # Usage.
-#
 usage() {
   cat <<- EOF
   Usage: $(basename "${0}") [OPTIONS]
@@ -17,16 +13,12 @@ EOF
   exit 1
 }
 
-#
 # Number of peers.
-#
 num_peers() {
   PEERS=$(curl -s "${NODE}" |  jq '.result.n_peers' | xargs)
 }
 
-#
 # Run.
-#
 run() {
   NODE="${1}"
   num_peers

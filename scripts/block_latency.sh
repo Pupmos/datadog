@@ -1,11 +1,7 @@
 #!/bin/sh
-#
 # Check block latency.
-#
 
-#
 # Usage.
-#
 usage() {
   cat <<- EOF
   Usage: $(basename "${0}") [OPTIONS]
@@ -17,16 +13,12 @@ EOF
   exit 1
 }
 
-#
 # Latest block time.
-#
 latest_block_time() {
   LATEST_BLOCK_TIME=$(curl -s "${NODE}" | jq '.result.sync_info.latest_block_time' | sed 's/"//g' | awk -F '.' '{print $1}' |sed 's/T/ /')
 }
 
-#
 # Run.
-#
 run() {
   NODE="${1}"
   latest_block_time

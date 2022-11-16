@@ -14,7 +14,7 @@ To check the block latency, run:
 
 ```console
 RPC_STATUS_URL=<rpc_status_url> \
-make cosmos-block-latency
+make block-latency
 ```
 
 where:
@@ -27,7 +27,7 @@ e.g.:
 
 ```console
 RPC_STATUS_URL=http://localhost:26657/status \
-make cosmos-block-latency
+make block-latency
 ```
 
 ### Peers
@@ -36,7 +36,7 @@ To check the number of peers, run:
 
 ```console
 RPC_NET_INFO_URL=<rpc_net_info_url> \
-make cosmos-peers
+make peers
 ```
 
 where:
@@ -49,5 +49,5 @@ e.g.:
 
 ```console
 RPC_NET_INFO_URL=http://localhost:26657/net_info \
-make cosmos-peers
+make peers
 ```
