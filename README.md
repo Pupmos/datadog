@@ -1,4 +1,4 @@
-# Datadog Monitoring
+# Datadog
 
 Custom scripts for DataDog.
 
