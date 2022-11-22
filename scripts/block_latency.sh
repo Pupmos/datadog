@@ -32,7 +32,7 @@ run() {
   NOW=$(date -u +%s)
   LATENCY=$(expr "${CURRENT_TS}" - "${LATEST_BLOCK_TS}")
 
-  curl -X POST "https://api.datadoghq.com/api/v1/series?api_key=${DD_API_KEY}" \
+  curl -s -X POST "https://api.datadoghq.com/api/v1/series?api_key=${DD_API_KEY}" \
   -H "Content-Type: application/json" \
   -d @- << EOF
   {
