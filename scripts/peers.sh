@@ -23,7 +23,9 @@ run() {
   NODE="${1}"
   num_peers
 
-  TAG=$(hostname | xargs)
+  if [ -z "${TAG}" ]; then
+    TAG=$(hostname | xargs)
+  fi
   NOW=$(date -u +%s)
 
   curl -X POST "https://api.datadoghq.com/api/v1/series?api_key=${DD_API_KEY}" \

@@ -24,7 +24,9 @@ run() {
   latest_block_time
 
   LATEST_BLOCK_TS=$(date -u -d "${LATEST_BLOCK_TIME}" +%s)
-  TAG=$(hostname | xargs)
+  if [ -z "${TAG}" ]; then
+    TAG=$(hostname | xargs)
+  fi
   CURRENT_TS=$(date -u +%s)
 
   NOW=$(date -u +%s)
