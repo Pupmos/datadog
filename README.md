@@ -1,4 +1,4 @@
-# Datadog
+# Pupmos/datadog
 
 Custom scripts for DataDog.
 
